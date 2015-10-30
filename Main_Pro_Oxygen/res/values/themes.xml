@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemeActivityNoTitle">
+         <item name="android:windowNoTitle">true</item>
+<!--          <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+ -->    </style>
+    
+
+</resources>

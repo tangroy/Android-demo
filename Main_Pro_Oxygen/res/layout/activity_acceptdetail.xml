@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_content" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/accept_detail" />
+    </RelativeLayout>
+
+    <ScrollView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/rl_top"
+         android:scrollbars="none"
+        >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_invite_accept"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="接受邀请（0人）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.oxygen.www.widget.NoScrollListView
+            android:id="@+id/lv_invite_accept"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invite_accept" />
+
+        <TextView
+            android:id="@+id/tv_invite_refuse"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lv_invite_accept"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="拒绝邀请（0人）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.oxygen.www.widget.NoScrollListView
+            android:id="@+id/lv_invite_refuse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invite_refuse" />
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0eff5" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:visibility="gone"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/item_myteam" />
+
+        <ImageView
+            android:id="@+id/iv_creatteam"
+            style="@style/style_iv_top_title_right"
+            android:src="@drawable/icon_create_event" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_team"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/wane_shape_white" >
+
+        <TextView
+            android:id="@+id/tv_search_team"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/search"
+            android:gravity="center"
+            android:text="搜索团队"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gv_teams"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_search_team"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="12dp"
+        android:numColumns="2"
+        android:scrollbars="@null"
+        android:verticalSpacing="12dp" >
+    </com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

@@ -1,0 +1,694 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0eff5"
+    android:gravity="center_vertical" >
+
+    <View
+        android:id="@+id/top_link"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#f9f9fb" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_link"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#f9f9fb"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_index_running" />
+
+        <TextView
+            android:id="@+id/tv_sport_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/tv_status"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="#1c1313"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_leader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sport_title"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    
+    <!-- 小米手环数据 -->
+    <RelativeLayout 
+        android:id="@+id/rl_xiaomi"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <View
+        android:id="@+id/view_xiaomi_top"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#ff5f00" />
+        
+        
+        <RelativeLayout
+            android:layout_below="@id/view_xiaomi_top"
+            android:id="@+id/rl_xiaomi_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/iv_xiaomi"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xiaomi_small" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_xiaomi"
+                android:text="同步小米手环数据"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_xiaomi_date"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="07/6月"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </RelativeLayout>
+        
+          <View 
+            android:id="@+id/view_divider0"
+            android:layout_below="@id/rl_xiaomi_top"
+            android:layout_width="match_parent"
+            android:background="#22000000"
+            android:layout_height="0.1dp"/>
+        
+        
+        <LinearLayout
+            android:id="@+id/ll" 
+            android:layout_below="@id/view_divider0"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                
+                <TextView 
+                    android:id="@+id/tv_xiaomi_step"
+                    android:text="671"
+ 		            android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+                <TextView 
+                    android:layout_marginTop="5dp"
+                    android:text="步数"
+                    android:textColor="@color/mygray"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+            </LinearLayout>
+             <LinearLayout 
+                android:orientation="vertical"
+                 android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                
+                   <TextView 
+                    android:id="@+id/tv_xiaomi_distance"
+                    android:text="0.97"
+ 		            android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+                <TextView 
+                    android:layout_marginTop="5dp"
+                    android:text="跑量(公里)"
+                    android:textSize="13sp"
+                    android:textColor="@color/mygray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <View 
+            android:id="@+id/view_divider"
+            android:layout_below="@id/ll"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#22000000"
+            android:layout_height="0.1dp"/>
+        
+        <TextView 
+            android:layout_below="@id/view_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:text="里程数已同步到挑战成绩中"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_waitplan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_sport_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_index_time"
+            android:textColor="#838B8B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/icon_index_address"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#838B8B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_accecp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/icon_index_user"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#838B8B"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_overplan"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_sportpic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_timeicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:alpha="0.6"
+            android:background="@drawable/wane_shape_black"
+            android:drawableLeft="@drawable/icon_am"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_synchronize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="数据未同步"
+            android:textColor="@color/crimson"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_challenges"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll_nostart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_challenges_starttime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/icon_index_time"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#838B8B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_declaration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/icon_rule"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="12dp"
+                android:paddingRight="15dp"
+                android:textColor="#838B8B"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grey_s" />
+
+            <LinearLayout
+                android:id="@+id/ll_nostart_twoteam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:padding="35dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_nostart_teama"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_nostart_teamb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_starting_twoteam"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_up_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLength="17"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_champion_ateam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_up_left"
+                android:src="@drawable/icon_index_champion"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_me_ateam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_champion_ateam"
+                android:src="@drawable/icon_index_twoteam_me"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_up_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:maxLength="17"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_champion_bteam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_up_right"
+                android:src="@drawable/icon_index_champion"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_me_bteam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/iv_champion_bteam"
+                android:src="@drawable/icon_index_twoteam_me"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/pb_distance"
+                style="@style/ProgressBar_Mini_center"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tv_up_left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:progress="50" />
+
+            <TextView
+                android:id="@+id/tv_down_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pb_distance"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_down_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pb_distance"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_starting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:maxLength="17"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_group_name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="17"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_challenges_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_group_name"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="17"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_rank_lab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rank"
+                android:layout_marginLeft="25dp"
+                android:text="名次"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_distance_lab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_challenges_distance"
+                android:layout_marginRight="25dp"
+                android:text="跑量(公里)"
+                android:textColor="@color/gray"
+                android:textSize="10sp" />
+
+            <View
+                android:id="@+id/champion_link"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_rank_lab"
+                android:layout_marginTop="15dp"
+                android:background="@color/grey_s" />
+
+            <TextView
+                android:id="@+id/tv_champion"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/champion_link"
+                android:gravity="center_vertical"
+                android:text="第一名："
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_noteam"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_champion"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_data"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:alpha="0.6"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_lab_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lab_left"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tv_data"
+                android:text="公里"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_lab_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时长"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lab_right"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="快来记录下你的战绩吧"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_synchronize_timeline"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:alpha="0.8"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_synchronize_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/crimson"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="数据未同步，点击重新上传"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/crimson"
+            android:paddingRight="10dp"
+            android:src="@drawable/icon_synchronize" />
+    </LinearLayout>
+
+</RelativeLayout>

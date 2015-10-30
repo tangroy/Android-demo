@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="选择团队" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            style="@style/style_iv_top_title_right"
+            android:text="发送邀请"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_selsct"
+        style="@style/style_rl_top_title"
+        android:layout_below="@+id/rl_top" >
+
+        <RelativeLayout
+            android:id="@+id/rl_select"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="查找"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/et_select"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:layout_toLeftOf="@+id/btn_select"
+                android:background="@drawable/wane_shape_grey"
+                android:gravity="center"
+                android:hint="请输入要查找的团队名称"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_selsct"
+        android:background="@color/gray" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/prlv_team_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+             android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:horizontalSpacing="12dp"
+            android:numColumns="2"
+            android:scrollbars="@null"
+            android:verticalSpacing="12dp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</RelativeLayout>

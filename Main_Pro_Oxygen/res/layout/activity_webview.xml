@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:visibility="gone"
+        style="@style/style_rl_top_title"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <com.oxygen.www.widget.MyWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:background="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_create_event"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_create_event" />
+
+        <TextView
+            android:id="@+id/tv_nav_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/nav_sport" />
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_top_message" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/wane_shape_white_small"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message_future"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/wane_shape_grey"
+        android:drawableRight="@drawable/icon_down"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="3dp"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/prlv_gdactivity_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tv_message_future"
+        android:background="@color/bg_content"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/rl_create_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.95"
+        android:background="#ffffff"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rl_create_lose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_hight"
+            android:layout_marginRight="14dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_create_lose" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_lydinfo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/rl_create_lose" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_create_event_info" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/rl_lydinfo"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/challenge_singal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_challenge_single"
+                android:gravity="center_horizontal"
+                android:text="个人挑战"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/challenge_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_challenge_two"
+                android:gravity="center_horizontal"
+                android:text="两队较量"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/challenge_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_challenge_more"
+                android:gravity="center_horizontal"
+                android:text="多队竞赛"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_event"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/ll_challenge"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/create_event"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_sport"
+                android:gravity="center_horizontal"
+                android:text="运动邀约"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/create_party"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_party"
+                android:gravity="center_horizontal"
+                android:text="聚会约饭"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/create_other"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_create_other"
+                android:gravity="center_horizontal"
+                android:text="其他"
+                android:textColor="@color/mygray"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

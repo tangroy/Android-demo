@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_running" >
+
+    <RelativeLayout
+        android:id="@+id/rl_updatesport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_text" />
+
+        <ImageView
+            android:id="@+id/iv_sport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/icon_startrunning" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ib_input"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/rl_updatesport"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_start_input" />
+
+    <ImageButton
+        android:id="@+id/ib_start"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="80dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_st_start" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/icon_start_close" />
+
+</RelativeLayout>

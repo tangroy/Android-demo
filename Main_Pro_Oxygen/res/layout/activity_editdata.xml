@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_nav_title"
+            style="@style/style_tv_top_title" />
+
+        <TextView
+            android:id="@+id/tv_nav_save"
+            style="@style/style_tv_top_title_right"
+            android:layout_alignParentRight="true"
+            android:text="@string/commit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" >
+
+        <EditText
+            android:gravity="top"
+            android:id="@+id/et_editdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:maxLength="100"
+            android:padding="5dp"
+            android:focusable="true"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_deletedata"
+            style="@style/style_iv_top_title_right"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/find_psw_title"
+            style="@style/style_tv_top_title" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/find_psw_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/find_psw_info"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:id="@+id/et_pnone_number"
+        android:layout_width="match_parent"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/send_code"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@color/send_code_color"
+        android:text="@string/send_code"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

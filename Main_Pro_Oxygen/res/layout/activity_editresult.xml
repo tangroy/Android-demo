@@ -1,0 +1,709 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            style="@style/style_rl_top_title" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/style_iv_top_title_left"
+                android:src="@drawable/iv_selector_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/style_tv_top_title"
+                android:text="@string/editresult" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                style="@style/style_iv_top_title_right"
+                android:text="@string/created"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_edit_sport"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_top"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll_important_date"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/iv_edit_sport"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_important_other"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:paddingRight="15dp"
+                    android:text="时长"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_other_duration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="00:00:00"
+                    android:textColor="@color/black"
+                    android:textSize="45sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_important_distance"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/ll_distance_distance"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:text="距离(km)"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_distance"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0.0"
+                        android:textColor="@color/black"
+                        android:textSize="35sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_distance_duration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:text="时长"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_duration"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="00:00:00"
+                        android:textColor="@color/black"
+                        android:textSize="35sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_important_match"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_match_lab_win"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_match_win"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_match_lab_gap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_match_lose"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_match_lab_lose"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_important_date"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:id="@+id/view_top"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="分局纪录"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/event_nextpage_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee" />
+        </LinearLayout>
+
+        <!-- 小局比分 -->
+
+        <LinearLayout
+            android:id="@+id/small_record"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_below="@+id/rl_record"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="81dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:text="我方"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:text="对方"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/hsv_small_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/small_record"
+            android:background="#eeeeee" >
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_score"
+                style="@style/style_rl_createdplan"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+               <!--  <ImageView
+                    android:id="@+id/iv_edit_score"
+                    style="@style/style_iv_createdplan"
+                    android:layout_toRightOf="@+id/iv_edit_score"
+                    android:src="@drawable/icon_createvent_sarttime" /> -->
+
+                <TextView
+                    android:id="@+id/tv_edit_score_lab"
+                    style="@style/style_tv_create_lab"
+                    android:text="我的进球         " />
+
+                <TextView
+                    android:id="@+id/et_edit_score"
+                    style="@style/style_tv_createdplan"
+                    android:layout_toRightOf="@+id/tv_edit_score_lab"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_title"
+                style="@style/style_rl_createdplan"
+                android:layout_below="@+id/rl_edit_score"
+                android:background="@color/white" >
+
+                <!-- <ImageView
+                    android:id="@+id/iv_edit_title"
+                    style="@style/style_iv_createdplan"
+                    android:layout_toRightOf="@+id/iv_edit_title"
+                    android:src="@drawable/icon_createvent_title" /> -->
+
+                <TextView
+                    android:id="@+id/tv_edit_titile_lab"
+                    style="@style/style_tv_create_lab"
+                    android:text="活动标题" />
+
+                <EditText
+                    android:id="@+id/et_edit_title"
+                    style="@style/style_tv_createdplan"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_toRightOf="@+id/tv_edit_titile_lab"
+                    android:enabled="false"
+                    android:hint="来一个响亮的标题吧" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_time"
+                style="@style/style_rl_createdplan"
+                android:layout_below="@+id/rl_edit_title"
+                android:background="@color/white" >
+
+                <!-- <ImageView
+                    android:id="@+id/iv_edit_starttime"
+                    style="@style/style_iv_createdplan"
+                    android:layout_toRightOf="@+id/iv_edit_starttime"
+                    android:src="@drawable/icon_createvent_sarttime" /> -->
+
+                <TextView
+                    android:id="@+id/tv_edit_starttime_lab"
+                    style="@style/style_tv_create_lab"
+                    android:text="开始时间" />
+
+                <TextView
+                    android:id="@+id/tv_edit_time"
+                    style="@style/style_tv_createdplan"
+                    android:layout_toRightOf="@+id/tv_edit_starttime_lab"
+                    android:enabled="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_duration"
+                style="@style/style_rl_createdplan"
+                android:layout_below="@+id/rl_edit_time"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+               <!--  <ImageView
+                    android:id="@+id/iv_edit_duration"
+                    style="@style/style_iv_createdplan"
+                    android:layout_toRightOf="@+id/iv_edit_duration"
+                    android:src="@drawable/icon_editevent_duration" /> -->
+
+                <TextView
+                    android:id="@+id/tv_edit_duration_lab"
+                    style="@style/style_tv_create_lab"
+                    android:text="活动时长" />
+
+                <TextView
+                    android:id="@+id/tv_edit_duration"
+                    style="@style/style_tv_createdplan"
+                    android:layout_toRightOf="@+id/tv_edit_duration_lab"
+                    android:text="00:00:00" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_edit_address"
+                style="@style/style_rl_createdplan"
+                android:layout_below="@+id/rl_edit_duration"
+                android:background="@color/white" >
+
+               <!--  <ImageView
+                    android:id="@+id/iv_edit_address"
+                    style="@style/style_iv_createdplan"
+                    android:layout_toRightOf="@+id/iv_edit_address"
+                    android:src="@drawable/icon_createvent_address" /> -->
+
+                <TextView
+                    android:id="@+id/tv_edit_address_lab"
+                    style="@style/style_tv_create_lab"
+                    android:text="活动地址" />
+
+                <TextView
+                    android:id="@+id/et_edit_address"
+                    style="@style/style_tv_createdplan"
+                    android:layout_toRightOf="@+id/tv_edit_address_lab"
+                    android:text="待定" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/et_edit_address"
+                    android:layout_marginTop="8dp"
+                    android:background="#eeeeee" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_screenshots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_edit_address"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="运动截图"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <GridView
+                    android:id="@+id/sport_screenshots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:numColumns="5" >
+                </GridView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_choose_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#a7a7a7"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/ll_choose_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:datePickerMode="spinner"
+                    android:layout_marginTop="5dip"
+                    android:calendarViewShown="false"
+                    android:gravity="center" />
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:timePickerMode="spinner"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_choose_duration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="小时"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_duration_hour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="分钟"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_duration_minute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="秒"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_duration_second"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_choose_distance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="公里"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_distance_km"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="百米"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_distance_m"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_choose_macth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_lab_win"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="我方"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_macth_win"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_lab_lose"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="对方"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <NumberPicker
+                        android:id="@+id/np_macth_lose"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_choose_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <NumberPicker
+                    android:id="@+id/np_score"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/chooseover"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#eeeeee"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</FrameLayout>

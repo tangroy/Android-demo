@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_content" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/myfriends" />
+
+        <ImageView
+            android:id="@+id/add_friend"
+            style="@style/style_iv_top_title_right"
+            android:gravity="center_vertical"
+            android:src="@drawable/icon_add_friend" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:background="@color/bg_content" >
+
+        <TextView
+            android:id="@+id/tv_myfriends_count"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="我的好友（0人）"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_myfriends_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_myfriends_count"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/tv_listisnull"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:text="暂无好友"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

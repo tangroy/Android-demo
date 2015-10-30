@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <com.oxygen.www.widget.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_def" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7888a9"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#404040"
+            android:textSize="12sp" />
+
+        <com.oxygen.www.widget.NoScrollGridView
+            android:id="@+id/photos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:divider="@color/o2_link2"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_col"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip" >
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dip"
+                android:text="11分钟前"
+                android:textColor="@color/gray"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/time"
+                android:text="删除"
+                android:textColor="@color/skyblue"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/vote"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="评论"
+                android:textColor="@color/gray"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="赞 "
+                android:textColor="@color/gray"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_praiselist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="@color/skyblue"
+            android:textSize="14.0sp" />
+
+        <com.oxygen.www.widget.NoScrollListView
+            android:id="@+id/lv_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee" />
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="活动类型" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lab_xingqu"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/rl_top"
+        android:gravity="center"
+        android:text="感兴趣活动" />
+
+    <GridView
+        android:id="@+id/gridview_interest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lab_xingqu"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:horizontalSpacing="18dp"
+        android:numColumns="4"
+        android:padding="10dp"
+        android:verticalSpacing="20dp" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/lab_all"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/gridview_interest"
+        android:gravity="center"
+        android:text="全部活动" />
+
+    <GridView
+        android:id="@+id/gridview_all"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lab_all"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:horizontalSpacing="18dp"
+        android:numColumns="4"
+        android:padding="10dp"
+        android:verticalSpacing="20dp" >
+    </GridView>
+
+</RelativeLayout>

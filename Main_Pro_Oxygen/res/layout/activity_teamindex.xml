@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/item_myteam" />
+
+        <ImageView
+            android:id="@+id/iv_creatteam"
+            style="@style/style_iv_top_title_right"
+            android:src="@drawable/icon_groud_created"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_lb_mycreated"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/bg_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我创建的团队"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <com.oxygen.www.widget.NoScrollListView
+                android:id="@+id/lv_team_mycreated"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lb_mycreated"
+                android:divider="@color/mygray"
+                android:dividerHeight="0.5dp" />
+
+            <TextView
+                android:id="@+id/tv_lb_myjoin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lv_team_mycreated"
+                android:background="@color/bg_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我加入的团队"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <com.oxygen.www.widget.NoScrollListView
+                android:id="@+id/lv_team_join"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/mygray"
+                android:dividerHeight="0.5dp"
+                android:layout_below="@+id/tv_lb_myjoin" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/iv_nogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_top"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="暂无团队"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

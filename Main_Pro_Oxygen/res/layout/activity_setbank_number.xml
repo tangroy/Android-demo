@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/relatedpay" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="@style/style_iv_top_title_right"
+            android:gravity="center_vertical"
+            android:text="@string/created"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/withdrawal_info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_top"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="收款账户通过审核后即可提现"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/account_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/withdrawal_info"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="输入开户姓名"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/bank_number"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/account_name"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="输入银行卡号"
+        android:inputType="number|numberDecimal"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/bank_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/bank_number"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="输入开户行支行名称"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+</RelativeLayout>

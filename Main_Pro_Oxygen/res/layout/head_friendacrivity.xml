@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9fb" >
+
+    <TextView
+        android:id="@+id/tv_friend_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#f9f9fb"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="好友推荐"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.oxygen.www.widget.NoScrollListView
+        android:id="@+id/lv_friend_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_friend_suggest"
+        android:background="@color/white"
+        android:divider="@color/mygray"
+        android:dividerHeight="1dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@id/lv_friend_suggest"
+        android:background="#f9f9fb" />
+
+</RelativeLayout>

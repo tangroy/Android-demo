@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/input_code_title"
+            style="@style/style_tv_top_title" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_oldpsw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/wane_shape_input_box"
+        android:gravity="center_vertical"
+        android:inputType="textPassword"
+        android:paddingLeft="3dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_newpsw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/wane_shape_input_box"
+        android:hint="@string/newpsw"
+        android:inputType="textPassword"
+        android:paddingLeft="3dp"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_re_newpsw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/wane_shape_input_box"
+        android:hint="@string/surepsw"
+        android:inputType="textPassword"
+        android:paddingLeft="3dp"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt_reset_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/wane_shape_rectangle_green"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:text="@string/reset_login"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0eff5" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:layout_marginRight="10dp"
+            android:text="图文编辑" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="16dp"
+                android:text="1. 请在电脑端浏览器输入访问地址："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_step11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_step2"
+                android:layout_below="@+id/tv_step1"
+                android:layout_marginBottom="10dp"
+                android:text="http://leyundong.com/rich"
+                android:textColor="#0000ff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_step2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_step11"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:text="2. 在网页编辑完成后扫描页面二维码，即可将编辑内容同步到手机"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_below="@id/tv_step2"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/wane_shape_rectangle_red"
+                android:layout_centerHorizontal="true"
+                android:text="点我扫描二维码"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <RelativeLayout
+                android:id="@+id/rl_preview"
+                android:visibility="gone"
+                android:layout_below="@id/tv_click"
+                android:background="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="内容预览:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_save"
+                    android:layout_marginRight="50dp"
+                    android:text="清除"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="保存"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            <com.oxygen.www.widget.MyWebView
+                android:id="@+id/webview"
+                android:layout_marginTop="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rl_preview"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

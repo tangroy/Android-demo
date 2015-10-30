@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="更多高级设置" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="@style/style_iv_top_title_right"
+            android:gravity="center_vertical"
+            android:text="@string/sure"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- 活动人数 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_people"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_top" >
+
+        <TextView
+            android:id="@+id/tv_limit"
+            style="@style/style_tv_create_lab"
+            android:text="活动人数"
+            android:textColor="@color/mygray" />
+
+        <EditText
+            android:id="@+id/et_people"
+            style="@style/style_tv_createdplan"
+            android:layout_toRightOf="@+id/tv_limit"
+            android:hint="不限"
+            android:numeric="integer"
+            android:textColorHint="@color/mygray"
+            android:textCursorDrawable="@drawable/color_cursor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+    <!-- 活动关联团队 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_relate_team"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_people" >
+
+        <TextView
+            android:id="@+id/tv_relate_team"
+            style="@style/style_tv_create_lab"
+            android:text="关联团队"
+            android:textColor="@color/mygray" />
+
+        <TextView
+            android:id="@+id/et_relate_team_name"
+            style="@style/style_tv_createdplan"
+            android:layout_toRightOf="@+id/tv_relate_team"
+            android:text="暂不关联"
+            android:textColor="@color/mygray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+    <!-- 活动隐私设置 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_privacy"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_relate_team" >
+
+        <TextView
+            android:id="@+id/tv_privacy2"
+            style="@style/style_tv_create_lab"
+            android:text="隐私设置"
+            android:textColor="@color/mygray" />
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            style="@style/style_tv_createdplan"
+            android:layout_toRightOf="@+id/tv_privacy2"
+            android:text="仅限邀请"
+            android:textColor="@color/mygray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+    <!-- 设置报名者填写项 -->
+    <RelativeLayout
+        android:id="@+id/rl_settingmoremore"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_privacy" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:text="设置报名者填写项 "
+            android:textColor="@color/mygray" />
+        
+         <TextView
+            android:id="@+id/tv_moremore"
+            android:visibility="invisible"
+            style="@style/style_tv_create_lab"
+            android:text="已设置"
+            android:layout_toLeftOf="@+id/iv"
+            android:textColor="@color/mygray" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/arrows_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

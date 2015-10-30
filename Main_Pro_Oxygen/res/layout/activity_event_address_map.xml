@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title2">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title2"
+            android:text="活动地点" />
+
+        <TextView
+            android:id="@+id/tv_created_post"
+            style="@style/style_iv_top_title_right"
+            android:text="开始导航"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <com.amap.api.maps2d.MapView 
+	   android:id="@+id/mapView"
+	   android:layout_width="match_parent" 
+	   android:layout_height="match_parent"/>
+
+</LinearLayout>

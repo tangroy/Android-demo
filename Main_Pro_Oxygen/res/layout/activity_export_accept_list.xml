@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="导出名单" />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_coin"
+        android:layout_below="@id/rl_top"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView 
+            android:id="@+id/tv"
+            android:layout_marginTop="10dp"
+            android:text="系统已经根据您设置的报名者填写项, 自动帮您生成一份活动报名名单"
+            android:textColor="@color/mygray"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <RelativeLayout 
+            android:layout_below="@id/tv"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/wane_shape_hollow_rect_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView 
+                android:id="@+id/tv_tips"
+				android:layout_margin="10dp"
+          		android:text="点击下面链接, 即可在浏览器中打开或者下载报名名单"
+        		android:textColor="@color/mygray"
+            	android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+             <TextView 
+                android:id="@+id/tv_link" 
+                android:layout_below="@id/tv_tips"
+				android:layout_margin="10dp"
+        		android:autoLink="web"
+            	android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+             
+              <TextView 
+                android:id="@+id/tv_copy"
+                android:layout_below="@id/tv_link"
+                android:layout_centerHorizontal="true"
+				android:layout_margin="10dp"
+				android:padding="5dp"
+        		android:textColor="@color/mygray"
+        		android:background="@drawable/wane_shape_hollow_rect_grey"
+            	android:textSize="18sp"
+            	android:visibility="gone"
+            	android:text="复制链接"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+        </RelativeLayout>
+        
+        
+    </RelativeLayout>
+               
+    
+
+</RelativeLayout>

@@ -1,0 +1,333 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rl_newtop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                style="@style/style_rl_top_title2"
+                android:background="#55ffffff" >
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    style="@style/style_iv_top_title_left"
+                    android:src="@drawable/iv_selector_back" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/style_tv_top_title2"
+                    android:text="@string/sport_createdpersonplan" />
+
+                <TextView
+                    android:id="@+id/tv_created_post"
+                    style="@style/style_iv_top_title_right"
+                    android:text="@string/created"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/ll_waitplan"
+                android:layout_width="fill_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/rl_top"
+                android:background="#212329"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_sportpic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_takephoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/icon_open_camera"
+                    android:gravity="center"
+                    android:text="添加活动封面"
+                    android:textColor="#3f4149"
+                    android:textSize="16sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/rl_newtop"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee" >
+
+                <!-- 活动标题 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_sport_title"
+                    style="@style/style_rl_createdplan"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_sport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp" />
+
+                    <EditText
+                        android:id="@+id/et_sport_title"
+                        style="@style/style_tv_createdplan"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_sport"
+                        android:hint="来一个响亮的标题吧"
+                        android:textColorHint="@color/mygray"
+                        android:textCursorDrawable="@drawable/color_cursor" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+
+                <!-- 活动介绍 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_sport_intro"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_sport_title" >
+
+                    <TextView
+                        android:id="@+id/tv_created_intro_lab"
+                        style="@style/style_tv_create_lab_intro"
+                        android:text="活动介绍" />
+                    
+                    <RelativeLayout
+                        android:id="@+id/rl_rich" 
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp">
+                        
+                        <ImageView 
+                            android:id="@+id/iv_rich"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_rich"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        
+                    	<TextView 
+	                        android:id="@+id/tv_rich"
+	                        android:layout_toRightOf="@+id/iv_rich"
+	                        android:layout_marginLeft="5dp"
+	                        android:text="图文编辑"
+	                        android:textSize="16sp"
+	                        android:layout_centerVertical="true"
+	                        android:textColor="#949494"
+	                        android:gravity="center_vertical"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"/>    
+                        
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_sport_intro"
+                        style="@style/style_tv_createdplan_intro"
+                        android:layout_below="@+id/tv_created_intro_lab"
+                        android:layout_marginLeft="15dp"
+                        android:hint="一起运动更快乐，约吗？"
+                        android:visibility="visible"
+                        android:padding="5dp"
+                        android:textColor="@color/mygray"
+                        android:textColorHint="@color/mygray"
+                        android:textCursorDrawable="@drawable/color_cursor" />
+                    
+                    <RelativeLayout 
+                        android:id="@+id/rl_rich_tag"
+                        android:layout_below="@+id/tv_created_intro_lab"
+						android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:layout_height="wrap_content">
+                        
+                        <TextView
+		                android:id="@+id/tv_rich_tag"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:paddingLeft="20dp"
+		                android:paddingRight="20dp"
+		                android:paddingTop="8dp"
+		                android:paddingBottom="8dp"
+		                android:background="@drawable/wane_shape_rectangle_red"
+		                android:layout_centerHorizontal="true"
+		                android:gravity="center"
+		                android:text="查看图片编辑内容"
+		                android:textColor="@color/white"
+		                android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+
+                <!-- 活动时间 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_sport_time"
+                    style="@style/style_rl_createdplan"
+                    android:layout_below="@+id/rl_sport_intro"
+                    android:background="@drawable/tv_selector_event" >
+
+                    <TextView
+                        android:id="@+id/tv_created_starttime_lab"
+                        style="@style/style_tv_create_lab"
+                        android:text="活动时间"
+                        android:textColor="@color/mygray" />
+
+                    <TextView
+                        android:id="@+id/tv_sport_time"
+                        style="@style/style_tv_createdplan"
+                        android:layout_toRightOf="@+id/tv_created_starttime_lab" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+
+                <!-- 活动地址 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_sport_address2"
+                    style="@style/style_rl_createdplan"
+                    android:layout_below="@id/rl_sport_time"
+                    android:background="@drawable/tv_selector_event"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <TextView
+                        android:id="@+id/tv_created_address_lab"
+                        style="@style/style_tv_create_lab"
+                        android:text="添加地点"
+                        android:textColor="@color/mygray" />
+
+                    <TextView
+                        android:id="@+id/tv_sport_address"
+                        style="@style/style_tv_createdplan"
+                        android:layout_toRightOf="@id/tv_created_address_lab"
+                        android:text="待定"
+                        android:textColor="@color/mygray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+
+                <!-- 活动费用 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_money"
+                    style="@style/style_rl_createdplan"
+                    android:layout_below="@+id/rl_sport_address2" >
+
+                    <TextView
+                        android:id="@+id/tv_money2"
+                        style="@style/style_tv_create_lab"
+                        android:text="活动费用"
+                        android:textColor="@color/mygray" />
+
+                    <EditText
+                        android:id="@+id/et_money"
+                        style="@style/style_tv_createdplan"
+                        android:layout_width="150dp"
+                        android:layout_toRightOf="@+id/tv_money2"
+                        android:hint="默认免费"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@color/mygray"
+                        android:textCursorDrawable="@drawable/color_cursor" />
+
+                    <TextView
+                        android:id="@+id/tv_privacy"
+                        style="@style/style_tv_createdplan"
+                        android:layout_toRightOf="@+id/et_money"
+                        android:text="元"
+                        android:textColor="@color/mygray"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+
+                <!-- 更多高级设置 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_settingmore"
+                    style="@style/style_rl_createdplan"
+                    android:layout_below="@+id/rl_money"
+                    android:background="@drawable/tv_selector_event" >
+
+                    <TextView
+                        style="@style/style_tv_create_lab"
+                        android:text="更多高级设置"
+                        android:textColor="@color/mygray" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrows_gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</FrameLayout>

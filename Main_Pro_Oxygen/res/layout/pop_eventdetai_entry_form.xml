@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:orientation="vertical" >
+
+        <!-- 请输入报名项 -->
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="请填写报名项 "
+            android:textColor="@color/skyblue"
+            android:textSize="18sp" />
+
+        <!-- 姓名 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/style_pop_form_tv"
+                android:text="姓名" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_name"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 手机 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_mobile"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                style="@style/style_pop_form_tv"
+                android:text="手机" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@+id/tv_mobile"
+                android:inputType="phone" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 部门 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_department"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_department"
+                style="@style/style_pop_form_tv"
+                android:text="部门" />
+
+            <EditText
+                android:id="@+id/et_department"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_department"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 工号 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_number"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/style_pop_form_tv"
+                android:text="工号" />
+
+            <EditText
+                android:id="@+id/et_number"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_number"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 公司 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_company"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/style_pop_form_tv"
+                android:text="公司" />
+
+            <EditText
+                android:id="@+id/et_company"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_company"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 邮箱 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/style_pop_form_tv"
+                android:text="邮箱" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_email"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 备注 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_remarks"
+            style="@style/style_rl_pop_form"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_remarks"
+                style="@style/style_pop_form_tv"
+                android:text="备注" />
+
+            <EditText
+                android:id="@+id/et_remarks"
+                style="@style/style_pop_form_et"
+                android:layout_toRightOf="@id/tv_remarks"
+                android:inputType="text" />
+
+            <View style="@style/style_rl_pop_form_view" />
+        </RelativeLayout>
+
+        <!-- 请输入报名项 -->
+
+        <TextView
+            android:id="@+id/tv_finish"
+            style="@style/style_tv_create_lab"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tv_selector_setting"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="完成"
+            android:textColor="@color/skyblue"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

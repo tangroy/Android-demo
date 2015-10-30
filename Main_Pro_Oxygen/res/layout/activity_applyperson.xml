@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/event_apply_person" />
+        
+        <TextView
+            android:id="@+id/tv_manager"
+            style="@style/style_tv_top_title"
+            android:visibility="gone"
+            android:background="@drawable/tv_selector_setting"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="管理" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_applied"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/rl_top"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="已报名"
+            android:textColor="#979797"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/accept_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:textColor="#979797"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/gv_accept_person"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_applied"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="20dp"
+        android:paddingBottom="10dp"
+        android:verticalSpacing="5dp" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_share"
+        android:layout_alignParentBottom="true" 
+        android:background="#22979797"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/wane_shape_red"
+           android:gravity="center"
+           android:layout_centerInParent="true"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:padding="8dp"
+           android:text="邀请小伙伴"
+           android:textColor="@color/white"
+           android:textSize="18sp" />
+        
+    </RelativeLayout>
+    
+     <Button
+        android:id="@+id/tv_listisnull"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:text="@string/hvae_no_favicans"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="#f0eff5" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="12dp"
+        android:background="#f6f6f6"
+        android:gravity="center_vertical"
+        android:text="好友推荐"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.oxygen.www.widget.NoScrollListView3
+        android:id="@+id/lv_friend_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:divider="#33000000"
+        android:dividerHeight="0.1dp" />
+<!--     <ListView
+        android:id="@+id/lv_friend_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:divider="#33000000"
+        android:dividerHeight="0.1dp" /> -->
+    
+    
+     <TextView
+        android:id="@+id/tv_add_friend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="14dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:text="添加更多好友"
+        android:textColor="@color/mygray"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

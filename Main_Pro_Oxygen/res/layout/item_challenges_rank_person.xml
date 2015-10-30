@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp" >
+
+        <TextView
+            android:id="@+id/tv_posotion"
+            android:layout_width="35dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.oxygen.www.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_posotion"
+            android:src="@drawable/icon_def" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_score"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black_pk"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_distance"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="10dp"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:progress="1" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

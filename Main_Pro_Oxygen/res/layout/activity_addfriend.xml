@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/addfriends" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rl_top"
+        android:background="#979797"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/search_people_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/wane_shape_lightgray"
+                android:gravity="center_vertical"
+                android:hint="输入昵称搜索"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="#979797" />
+
+            <ImageView
+                android:id="@+id/iv_search_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_search_cancel"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_invite_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_name"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_invite_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发邀请卡"
+            android:textColor="#979797"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_invite_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/invite_qqfriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableTop="@drawable/icon_share_qq"
+                    android:paddingTop="15dp"
+                    android:text="QQ好友"
+                    android:textColor="#979797"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/invite_wxfriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableTop="@drawable/icon_share_wx"
+                    android:paddingTop="15dp"
+                    android:text="微信好友"
+                    android:textColor="#979797"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/invite_wxfriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableTop="@drawable/icon_share_wxfriend"
+                    android:paddingTop="15dp"
+                    android:text="朋友圈"
+                    android:textColor="#979797"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/ll_invite_friends"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/tv_know_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_1"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:text="你可能认识的人"
+        android:textColor="#979797"
+        android:textSize="15sp" />
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/lv_know_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_know_people"
+        android:scrollbars="none" >
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

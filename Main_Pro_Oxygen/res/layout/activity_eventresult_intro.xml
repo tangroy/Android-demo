@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+    
+	 <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="活动介绍" />
+
+    </RelativeLayout>
+    
+	 <TextView 
+	     android:id="@+id/tv_intro"
+	     android:layout_below="@id/rl_top"
+	     android:layout_margin="16dp"
+	     android:textSize="18sp"
+	     android:textColor="@color/mygray"
+	     android:background="@color/white"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"/>
+    
+    
+</RelativeLayout>

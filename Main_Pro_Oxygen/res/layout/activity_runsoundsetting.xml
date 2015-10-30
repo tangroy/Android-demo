@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/runsoundsetting" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top" >
+
+        <RadioButton
+            android:id="@+id/close"
+            android:layout_width="fill_parent"
+            android:background="@color/grey_s"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="关闭语音"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey_s"
+            android:button="@null"
+            android:paddingRight="10dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="男声"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/grey_s"
+            android:paddingRight="10dp"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="女声"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+</RelativeLayout>

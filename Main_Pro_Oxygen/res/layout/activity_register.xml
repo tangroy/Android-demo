@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/register" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top" >
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/wane_shape_input_box"
+            android:hint="@string/phonenumber"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/et_mobile"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/wane_shape_input_box"
+            android:hint="@string/toast_password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor" />
+
+        <RelativeLayout
+            android:id="@+id/rl_getvcode"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/white" >
+
+            <EditText
+                android:id="@+id/et_vcode"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/wane_shape_input_box"
+                android:hint="@string/vcode"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <Button
+                android:id="@+id/btn_getvcode"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/wane_shape_getcode_red"
+                android:padding="12dp"
+                android:text="@string/getvcode"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rl_getvcode"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/wane_shape_rectangle_red"
+            android:gravity="center"
+            android:src="@drawable/wane_shape_rectangle_red"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        <include layout="@layout/layout_login" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</RelativeLayout>

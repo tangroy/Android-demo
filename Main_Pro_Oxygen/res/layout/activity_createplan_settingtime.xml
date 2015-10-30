@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="设置活动时间" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="@style/style_iv_top_title_right"
+            android:gravity="center_vertical"
+            android:text="@string/sure"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_start_time"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_top" >
+
+        <ImageView
+            android:id="@+id/iv_created_starttime"
+            style="@style/style_iv_createdplan"
+            android:src="@drawable/icon_createvent_sarttime" />
+
+        <TextView
+            android:id="@+id/tv_created_starttime_lab"
+            style="@style/style_tv_create_lab"
+            android:layout_toRightOf="@+id/iv_created_starttime"
+            android:text="开始时间" />
+
+        <TextView
+            android:id="@+id/tv_sport_time"
+            style="@style/style_tv_createdplan"
+            android:layout_toRightOf="@+id/tv_created_starttime_lab" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sport_endtime"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_start_time" >
+
+        <ImageView
+            android:id="@+id/iv_created_endtime"
+            style="@style/style_iv_createdplan"
+            android:src="@drawable/icon_createvent_sarttime" />
+
+        <TextView
+            android:id="@+id/tv_created_endtime_lab"
+            style="@style/style_tv_create_lab"
+            android:layout_toRightOf="@+id/iv_created_endtime"
+            android:text="结束时间" />
+
+        <TextView
+            android:id="@+id/tv_sport_endtime"
+            style="@style/style_tv_createdplan"
+            android:layout_toRightOf="@+id/tv_created_endtime_lab" />
+    </RelativeLayout>
+    
+     <ScrollView
+            android:id="@+id/sl_created_choosetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none"
+            android:visibility="gone">
+			
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#a7a7a7"
+                android:orientation="vertical" >
+				<TextView 
+				    android:id="@+id/tv_time_name"
+				    android:textColor="@color/red"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:gravity="center_horizontal"
+				    />
+                <DatePicker 
+                    android:id="@+id/date_picker"
+                    android:layout_below="@+id/tv_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dip"
+                    android:calendarViewShown="false" />
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_picker"
+                    android:timePickerMode="spinner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dip" />
+
+                <TextView
+                    android:id="@+id/choosetime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/time_picker"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:text="完成"
+                    android:textColor="@color/red"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+        </ScrollView>
+
+</RelativeLayout>

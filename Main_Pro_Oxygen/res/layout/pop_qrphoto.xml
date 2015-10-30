@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee" >
+
+       
+
+
+        <TextView
+            android:id="@+id/tv_savaphoto"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="保存图片"
+            android:textColor="@color/skyblue"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_savaphoto"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/skyblue"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

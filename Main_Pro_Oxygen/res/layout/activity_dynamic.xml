@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0eff5" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <TextView
+            android:id="@+id/tv_nav_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/nav_feed" />
+        
+        <ImageView 
+            android:id="@+id/iv_pub"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feed_photo" />
+        
+    </RelativeLayout>
+
+    <com.oxygen.www.widget.RefreshListView
+        android:id="@+id/rlv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none" />
+    
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        layout="@layout/activity_loading"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        layout="@layout/activity_error"
+        android:visibility="gone" />
+
+</RelativeLayout>

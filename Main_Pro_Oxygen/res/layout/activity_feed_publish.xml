@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0eff5" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="0dp"
+            android:src="@drawable/feed_close" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="发表动态" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/rl_top" >
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_takephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/icon_open_camera"
+            android:gravity="center"
+            android:textColor="#3f4149"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    
+    <EditText
+            android:id="@+id/et_words"
+            android:layout_width="fill_parent"
+            android:padding="16dp"
+            android:layout_height="110dp"
+            android:background="@color/white"
+            android:layout_below="@+id/rl_center"
+            android:gravity="left|top"
+            android:hint="运动更健康，分享更快乐…"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/mygray"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" >
+	</EditText>
+  
+    <View
+        android:id="@+id/view_divider"
+        android:layout_below="@id/et_words"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:alpha="0.2"
+        android:background="@color/black" />
+    
+    <RelativeLayout 
+        android:id="@+id/rl_tag"
+        android:layout_below="@id/view_divider"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_height="54dp">
+        
+        <ImageView 
+            android:id="@+id/iv_tag"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feed_tag"/>
+        
+        <TextView 
+            android:id="@+id/tv_tags"
+            android:layout_toRightOf="@id/iv_tag"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至少添加一个标签"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+        
+        <ImageView 
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_right"/>
+        
+    </RelativeLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        layout="@layout/activity_loading"
+        android:visibility="gone" />
+
+    
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/event_manege" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top" >
+
+        <RelativeLayout
+            android:id="@+id/rl_sportdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#88ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="30dp" >
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:gravity="center"
+                android:padding="5dp"
+                android:text="00月00日"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sport_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_data"
+                android:drawableLeft="@drawable/icon_index_running"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="--"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_waitplan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_sport_title"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_data"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_sport_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_sport_starttime"
+                    android:text="--"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/icon_sport_address"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="--"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_accept_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/icon_created_allpeplo"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="--"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/icon_created_intro"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="--"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_toupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_toupdata" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/ll_waitplan" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_accept"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_1"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/event_enrollment"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrows_gray" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/o2_link2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sale"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_accept"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/event_scoremanage"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrows_gray" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/o2_link2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_sale"
+        android:layout_marginTop="50dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/event_cancel"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/o2_link2" />
+    </RelativeLayout>
+
+</RelativeLayout>

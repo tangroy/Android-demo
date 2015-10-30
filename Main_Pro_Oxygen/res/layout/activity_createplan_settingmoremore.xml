@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="设置报名者填写项 " />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="@style/style_iv_top_title_right"
+            android:gravity="center_vertical"
+            android:text="@string/sure"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    
+
+    <!-- 姓名 -->
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_top" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="姓名"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_name"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+        <!-- 手机 -->
+    <RelativeLayout
+        android:id="@+id/rl_mobile"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_name" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="手机"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_mobile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+
+         <!-- 部门 -->
+    <RelativeLayout
+        android:id="@+id/rl_department"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_mobile" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="部门"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_department"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+    
+         <!-- 工号 -->
+    <RelativeLayout
+        android:id="@+id/rl_number"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_department" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="工号"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_number"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+    
+          <!-- 公司 -->
+    <RelativeLayout
+        android:id="@+id/rl_company"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_number" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="公司"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_company"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+    
+          <!-- 邮箱 -->
+    <RelativeLayout
+        android:id="@+id/rl_email"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_company" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="邮箱"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_email"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+    
+             <!-- 备注 -->
+    <RelativeLayout
+        android:id="@+id/rl_remarks"
+        style="@style/style_rl_createdplan"
+        android:layout_below="@+id/rl_email" >
+
+        <TextView
+            style="@style/style_tv_create_lab"
+            android:layout_marginLeft="20dp"
+            android:text="备注"
+            android:textColor="@color/mygray" />
+        
+         <CheckBox
+            android:id="@+id/cb_remarks"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:checked="false"
+            android:button="@null"
+            android:background="@drawable/iv_invite_friend_bg"
+            android:thumbTextPadding="22dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,529 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0eff5"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="8dp" >
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/white" >
+
+        <com.oxygen.www.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_def" />
+
+        <RelativeLayout
+            android:id="@+id/rl_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_head" >
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="小乐助手"
+                android:textColor="#3e7c9f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_nick"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_nick"
+                android:text="发起了个人 pk"
+                android:textColor="@color/mygray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nick"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="20 分钟前"
+                android:textColor="@color/mygray"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <!-- 中间结构 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp" >
+
+        <!-- 精选 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_post_top"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_post_top"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="欢迎加入乐运动"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_post_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_post_title"
+                android:layout_below="@id/tv_post_title"
+                android:layout_marginTop="5dp"
+                android:text="新来的同学看过来 1分钟教你玩转乐运动"
+                android:textColor="@color/mygray"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_post_summary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.2"
+                android:background="@color/black" />
+        </RelativeLayout>
+
+        <!-- 记录成绩 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_chengji"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_chengji"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_loading" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.5"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" >
+
+                <ImageView
+                    android:id="@+id/iv_chengji_sport"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lab_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="bottom"
+                            android:text="距离"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tv_lab_left"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tv_lab_left"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tv_data"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_toRightOf="@+id/tv_data"
+                            android:gravity="bottom"
+                            android:text="公里"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="35dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lab_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="bottom"
+                            android:text="时长"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_lab_right"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tv_lab_right"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 活动/ 挑战 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#f6f6f6"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_event"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/feed_4" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_event"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="乐活灵动团建跑步"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_event_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_event_title"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="2015-08-29 18:30"
+                    android:textColor="@color/mygray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_event_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_event_time"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="广东省深圳市市民中心"
+                    android:textColor="@color/mygray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 团队 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#f6f6f6"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:visibility="gone" >
+
+            <com.oxygen.www.widget.CircleImageView
+                android:id="@+id/iv_team"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:src="@drawable/icon_def" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_team"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="乐活灵动团建跑步"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_team_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_team_name"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="团队宣言团队宣言团队宣言"
+                    android:textColor="@color/mygray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 用户发表评论 Moment -->
+
+        <RelativeLayout
+            android:id="@+id/rl_moment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_moment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_loading" />
+
+            <TextView
+                android:id="@+id/tv_moment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_moment"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="15dp"
+                android:text="新来的同学看过来 1分钟教你玩转乐运动"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_moment" >
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/feed_tag" />
+
+                <com.oxygen.www.widget.FlowLayout
+                    android:id="@+id/fl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/iv"
+                    android:background="@color/white"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp" >
+                </com.oxygen.www.widget.FlowLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/rl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.2"
+                android:background="@color/black" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 赞 和 评论 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_votes_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_center"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_vote"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/iv_comment"
+            android:scaleType="fitXY"
+            android:src="@drawable/feed_thumb_normal" />
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/iv_selector_fee_comment" />
+    </RelativeLayout>
+
+    <!-- 评论列表 -->
+
+    <LinearLayout
+        android:id="@+id/ll_votes_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_votes_comment"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_votes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_vote_thumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/feed_thumb_selected"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_vote_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@id/iv_vote_thumb"
+                android:textColor="#3e7c9f"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:alpha="0.2"
+            android:background="@color/black"
+            android:visibility="gone" />
+
+        <com.oxygen.www.widget.NoScrollListView2
+            android:id="@+id/lv_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.oxygen.www.widget.NoScrollListView2>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
             System.out.println("相机数据");
             Bundle b = data.getExtras();
             bitmap = (Bitmap) b.get("data");
-            bitmap = createBitmap(bitmap,waterMak,"一起运动更快乐");
+            bitmap = createBitmap(bitmap,waterMak,"1111111i love you 44,,一起运动更快乐");
             iv_watermarkingphoto.setImageBitmap(bitmap);
 
         }
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
      * @param waterMak
      * @return
      */
-    public static Bitmap createBitmap(Bitmap src, Bitmap waterMak, String
+    public Bitmap createBitmap(Bitmap src, Bitmap waterMak, String
             title) {
         // 获取原始图片与水印图片的宽与高
         int w = src.getWidth();
@@ -66,7 +66,6 @@ public class MainActivity extends Activity {
         Canvas mCanvas = new Canvas(newBitmap);
         // 往位图中开始画入src原始图片
         mCanvas.drawBitmap(src, 0, 0, null);
-        // 在src的右下角添加水印
         Paint paint = new Paint();
         //paint.setAlpha(100);
         mCanvas.drawBitmap(waterMak, w/4, h - wh - 5, paint);
@@ -75,9 +74,9 @@ public class MainActivity extends Activity {
             Paint textPaint = new Paint();
             textPaint.setColor(Color.WHITE);
             textPaint.setTextSize(8);
-            String familyName = "宋体";
-            Typeface typeface = Typeface.create(familyName,
-                    Typeface.NORMAL);
+            String familyName = "yyy";
+            Typeface typeface = Typeface.createFromAsset(this.getAssets(),
+                    "fonts/Impact.ttf");
             textPaint.setTypeface(typeface);
             textPaint.setTextAlign(Paint.Align.CENTER);
             mCanvas.drawText(title, w / 2, 50, textPaint);

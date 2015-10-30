@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_def" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_head"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="这两年，不弄几个巨头都不好意思打球"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_head"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:padding="3dp"
+        android:text="　目前骑士具体将在交易中送出怎样的筹码还不得而知，根据之前的消息源，骑士将要送出两个状元安德鲁·维金斯和，安东尼·本内特，外加一个未来选秀权。"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/iv_head"
+        android:layout_toRightOf="@+id/iv_head"
+        android:background="@color/gray" />
+</RelativeLayout>

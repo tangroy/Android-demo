@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/index_title_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            style="@style/style_rl_top_title" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/style_iv_top_title_left"
+                android:src="@drawable/iv_selector_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/style_tv_top_title"
+                android:text="@string/creare_team" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                style="@style/style_iv_top_title_right"
+                android:gravity="center_vertical"
+                android:text="@string/save"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_team_icon"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_team_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="上传团队标志"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.oxygen.www.widget.CircleImageView
+                android:id="@+id/team_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_raw"
+                android:background="@color/white"
+                android:src="@drawable/icon_team_takepicture" />
+
+            <ImageView
+                android:id="@+id/iv_raw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/icon_rightraw_grey" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp" />
+
+        <EditText
+            android:id="@+id/et_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="请输入团队名称"
+            android:maxLength="10"
+            android:paddingLeft="13dp"
+            android:textColor="@color/black"
+            android:textColorHint="#979797"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp" />
+
+        <EditText
+            android:id="@+id/tv_team_info"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="请输入团队介绍"
+            android:paddingLeft="13dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/black"
+            android:textColorHint="#979797"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sport_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="运动标签"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_sport_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/tv_sport"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:src="@drawable/icon_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_is_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_isopen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="是否公开"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_isopen_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_isopen"
+                android:text="（允许官方推荐）"
+                android:textColor="#949494"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_suggest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/iv_selector_team"
+                android:button="@null"
+                android:checked="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="xuan_person">
+        <item>敢不敢pk？不敢就认怂！</item>
+        <item>人生苦短，继续pk！</item>
+        <item>pk第一，友谊第二！</item>
+        <item>放马过来求虐倒！</item>
+     </string-array>
+    <string-array name="xuan_team">
+        <item>永不言退，谁是最强团队？</item>
+        <item>生而不凡，谁是最强天团？</item>
+        <item>实力证明一切，奔跑吧兄弟！</item>
+        <item>想得冠军？先打败我们！</item>
+    </string-array>
+
+</resources>

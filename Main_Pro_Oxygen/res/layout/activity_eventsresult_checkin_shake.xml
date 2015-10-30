@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_shake_check_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cc000000" >
+
+    <ImageView
+        android:id="@+id/iv_shake_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/shake_check_in" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_shake_check_in"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/close" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shake"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="活动就要开始啦! 你到场地了吗?"
+        android:textColor="#979797"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/shake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_shake_check_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="摇一摇签到, 有惊喜噢~"
+        android:textColor="#D54A54"
+        android:textSize="18sp" />
+
+</RelativeLayout>

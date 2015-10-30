@@ -1,0 +1,701 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventresult_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:alpha="0.5"
+            android:text="@string/event_detail" />
+
+        <ImageButton
+            android:id="@+id/iv_share"
+            style="@style/style_iv_top_title_right"
+            android:background="@null"
+            android:button="@null"
+            android:src="@drawable/icon_share" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/rl_eventinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+             <!-- 顶部墙纸 -->
+            <FrameLayout
+                android:id="@+id/ll_waitplan"
+                android:layout_width="fill_parent"
+                android:layout_height="185dp"  
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:alpha="0.3"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_sportpic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+             <!-- 签名状态 -->
+            <ImageView
+                android:id="@+id/iv_checked_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_status"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/check_in"
+                android:visibility="gone" />
+
+             <!-- 活动状态 -->
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_waitplan"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/white"
+                android:textColor="#eda32f"
+                android:textSize="14sp" />
+
+             <!-- 活动标题 -->
+            <RelativeLayout
+                android:id="@+id/rl_eventname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_status"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_selector_login" >
+
+                <ImageView
+                    android:id="@+id/iv_event_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_starttime" />
+
+                <TextView
+                    android:id="@+id/tv_event_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_event_name"
+                    android:gravity="center"
+                    android:textColor="@color/mygray"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_event_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/o2_link2" />
+            </RelativeLayout>
+
+             <!-- 活动时间 -->
+            <RelativeLayout
+                android:id="@+id/rl_sport_time"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl_eventname"
+                android:background="@drawable/tv_selector_login" >
+
+                <ImageView
+                    android:id="@+id/iv_sport_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_starttime" />
+
+                <TextView
+                    android:id="@+id/tv_sport_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_sport_time"
+                    android:gravity="center"
+                    android:textColor="@color/mygray"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/link1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_sport_time"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/o2_link2" />
+
+             <!-- 活动地址 -->
+            <RelativeLayout
+                android:id="@+id/rl_address"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/link1"
+                android:background="@drawable/tv_selector_login" >
+
+                <ImageView
+                    android:id="@+id/iv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_event_address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_address"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:text="待定"
+                    android:textColor="@color/mygray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_address_info"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrows_gray"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/link2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_address"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/o2_link2" />
+
+             <!-- 关联团队 -->
+            <RelativeLayout
+                android:id="@+id/rl_created_team"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/link2"
+                android:background="@drawable/tv_selector_login" >
+
+                <ImageView
+                    android:id="@+id/iv_created_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_eventdetail_group" />
+
+                <TextView
+                    android:id="@+id/tv_team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_toRightOf="@id/iv_created_team"
+                    android:text="暂未关联团队"
+                    android:textColor="@color/mygray"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_team_info"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/arrows_gray" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/link3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_created_team"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/o2_link2" />
+			 
+			 <!-- 活动介绍 -->
+            <RelativeLayout
+                android:id="@+id/rl_event_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/link3"
+                android:background="@@drawable/tv_selector_login"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp" >
+
+             <!--    <ImageView
+                    android:id="@+id/iv_event_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/icon_eventdetail_info" /> -->
+                
+                <TextView 
+                    android:id="@+id/tv_info_top"
+                    android:text="活动介绍"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/mygray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/tv_info_top"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/mygray"
+                    android:textSize="15sp" />
+                
+			 <com.oxygen.www.widget.MyWebView 
+                    android:id="@+id/web_rich"
+                    android:layout_below="@id/tv_info_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                
+
+<!--                 <ImageView
+                    android:id="@+id/iv_intro_arrows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/arrows_gray"
+                    android:visibility="gone" /> -->
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/link4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_event_info"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/o2_link2" />
+            
+			 <!-- 已报名 -->
+            <RelativeLayout
+                android:id="@+id/rl_apply"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/link4"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_accept"
+                    android:background="@drawable/tv_selector_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+
+                    <TextView
+                        android:id="@+id/tv_sighuped"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="已报名"
+                        android:textColor="#979797"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_accept_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_sighuped"
+                        android:ellipsize="end"
+                        android:paddingBottom="10dp"
+                        android:textColor="#979797"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/sendmessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/arrows_gray" />
+                </RelativeLayout>
+
+                <com.oxygen.www.widget.NoScrollGridView
+                    android:id="@+id/gv_accept"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_accept"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:horizontalSpacing="20dp"
+                    android:numColumns="6"
+                    android:paddingBottom="10dp"
+                    android:verticalSpacing="5dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/link5"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_apply"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/o2_link2" />
+
+             <!-- 战绩秀 -->
+            <RelativeLayout
+                android:id="@+id/rl_ranking"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/link5"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_title_ranking"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/tv_selector_login" >
+
+                    <TextView
+                        android:id="@+id/tv_title_ranking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/ranking"
+                        android:textColor="#979797"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_rankmore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/arrows_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_ranking_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_title_ranking"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="暂无成绩, 快来记录成绩吧"
+                    android:textColor="#979797"
+                    android:textSize="15sp" />
+
+                <com.oxygen.www.widget.NoScrollListView
+                    android:id="@+id/lv_rank"
+                    android:dividerHeight="0.5dp"
+                    android:divider="@color/o2_link2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_ranking_tip"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white" />
+                
+                <View
+	                android:layout_width="fill_parent"
+	                android:layout_height="1dp"
+	                android:layout_below="@+id/lv_rank"
+	                android:layout_marginTop="10dp"
+	                android:layout_marginLeft="10dp"
+	                android:layout_marginRight="10dp"
+	                android:background="@color/o2_link2" />
+                
+            </RelativeLayout>
+
+             <!-- 同步 ?? -->
+            <RelativeLayout
+                android:id="@+id/rl_synchronize"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rl_ranking"
+                android:layout_margin="5dp"
+                android:background="@color/grey"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_local_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black_pk"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_synchronize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/icon_synchronize_red" />
+            </RelativeLayout>
+
+             <!-- 活动动态 -->
+            <RelativeLayout
+                android:id="@+id/rl_moments"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_synchronize"
+                android:background="@color/white" >
+                
+                <TextView
+                    android:id="@+id/tv_dynamic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="@string/dynamic"
+                    android:textColor="#979797"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_nomoment"
+                    android:layout_below="@+id/tv_dynamic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/moment_coffe"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/moment_defttext"
+                    android:layout_below="@id/iv_nomoment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="60dp"
+                    android:text="抢先分享活动精彩瞬间，奖励200金币！"
+                    android:textColor="#979797"
+                    android:textSize="14sp" />
+
+                <com.oxygen.www.widget.NoScrollListView
+                    android:id="@+id/lv_moments"
+                    android:layout_below="@+id/tv_dynamic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="#eeeeee"
+                    android:dividerHeight="1dp" />
+
+                <TextView
+                    android:id="@+id/tv_moments_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lv_moments"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="查看全部评论"
+                    android:textColor="@color/red"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+     <!-- 底部导航菜单 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.95"
+        android:background="#eeeeee" >
+
+        <LinearLayout
+            android:id="@+id/ll_vote"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="visible"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/btn_publishmood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/wane_shape_red"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="邀请小伙伴"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/iv_share_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/wane_shape_red_hollow"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="发表动态"
+                android:textColor="@color/red"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_moment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/et_moment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/input"
+                android:hint="说点什么..."
+                android:focusable="true"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <Button
+                android:id="@+id/bt_commit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/wane_shape_red"
+                android:focusable="false"
+                android:text="评论"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+     <!-- 动态如片点击放大, 全屏浏览 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_group_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" >
+    </android.support.v4.view.ViewPager>
+
+     <!-- 摇一摇浮窗 -->
+    <include 
+        android:visibility="gone"
+        layout="@layout/activity_eventsresult_checkin_shake"/>
+
+     <!-- 加载中... -->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top" 
+        layout="@layout/activity_loading"/>
+    
+     <!-- 加载失败 -->
+     <include 
+         android:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/rl_top"
+         layout="@layout/activity_error"/>
+     <!-- 数据为空 -->
+    
+     <include 
+         android:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/rl_top"
+         layout="@layout/activity_empty"/>
+
+</RelativeLayout>

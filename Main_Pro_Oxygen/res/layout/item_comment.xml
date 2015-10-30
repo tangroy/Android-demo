@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+   >
+
+   <TextView 
+       android:id="@+id/namenick"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:text="小布"
+       android:textSize="14sp"
+       android:textColor="@color/skyblue"
+       
+       />
+    <TextView 
+       android:id="@+id/grep"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:text="："
+       android:layout_toRightOf="@+id/namenick"
+       android:textSize="14sp"
+       android:textColor="@color/gray"
+       />
+    
+ <TextView 
+       android:id="@+id/content"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="好赞好赞好赞"
+        android:layout_toRightOf="@+id/grep"
+       android:textSize="14sp"
+       android:textColor="@color/gray"
+       />
+</RelativeLayout>

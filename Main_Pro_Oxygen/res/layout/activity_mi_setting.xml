@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="智能硬件"
+            android:textColor="@color/black" />
+        
+         <TextView
+            android:id="@+id/tv_unbind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:text="解绑"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_center"
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+	
+        <ImageView 
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/xiaomi"/>
+        
+        <TextView 
+            android:id="@+id/tv_syn"
+            android:layout_below="@id/iv"
+            android:layout_marginTop="20dp"
+            android:text="今天尚未同步"
+            android:textColor="#e74940"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+         <TextView 
+            android:id="@+id/tv_syn_time"
+            android:visibility="gone"
+            android:layout_below="@id/tv_syn"
+            android:layout_marginTop="5dp"
+            android:text="最后更新时间: 2015-10-22 18:15"
+            android:textColor="#23bfa0"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/tv_click"
+        android:layout_below="@id/rl_center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="开始同步数据"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@drawable/bt_selector_pay"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+    
+  <TextView 
+        android:id="@+id/tv_info"
+        android:layout_below="@id/tv_click"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用规则:\n 1.小米手环同步数据后, 会在首页创建小米手环的数据显示卡片; \n 2. 在乐运动参与的挑战, 在有效期内同步的小米手环的数据, 都会自动统计在您的个人挑战成绩中:\n 3. 当天若同步的小米手环数据与乐运动记录数据重叠时, 我们会优先取当天的小米统计数据作为挑战成绩, 重叠的乐运动记录将不再计入挑战."
+        android:textColor="@color/mygray"
+        android:textSize="14sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+  
+  <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+    
+
+</RelativeLayout>

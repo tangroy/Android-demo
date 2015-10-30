@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            style="@style/style_rl_top_title" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/style_iv_top_title_left"
+                android:src="@drawable/iv_selector_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/style_tv_top_title"
+                android:text="@string/complete_teaminfo" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                style="@style/style_iv_top_title_right"
+                android:gravity="center_vertical"
+                android:text="@string/save"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_team_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:layout_marginTop="32dp" >
+
+            <TextView
+                android:id="@+id/tv_team_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="团队标志"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@id/tv_team_icon"
+                android:background="@color/white" >
+
+                <com.oxygen.www.widget.CircleImageView
+                    android:id="@+id/ibt_team_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_challenges_comtus_b" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/team_camera" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="团队名称"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_team_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@id/tv_team"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="13dp"
+            android:layout_marginRight="1dp"
+            android:background="#949494" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sport_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_sport_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="运动类型"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_sport_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@id/tv_sport_type"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="13dp"
+              android:visibility="gone"
+            android:layout_marginRight="1dp"
+            android:background="#949494" />
+
+        <RelativeLayout
+            android:id="@+id/rl_create_time"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="成立时间"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@id/tv_create_time"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="13dp"
+              android:visibility="gone"
+            android:layout_marginRight="1dp"
+            android:background="#949494" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sport_address"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_sport_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="团队主场"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_toRightOf="@id/tv_sport_address"
+                android:text="暂无主场"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="13dp"
+            android:layout_marginRight="1dp"
+            android:background="#949494" />
+
+        <RelativeLayout
+            android:id="@+id/rl_team_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_team_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="团队介绍"
+                android:textColor="#949494"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_toRightOf="@id/tv_team_info"
+                android:background="@android:color/transparent"
+                android:gravity="left|top"
+                android:lines="3"
+                android:text="一起运动更快乐"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 选择团队类型 -->
+
+    <LinearLayout
+        android:id="@+id/ll_team_sport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent" />
+
+        <GridView
+            android:id="@+id/gv_teamsports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:numColumns="5" >
+        </GridView>
+    </LinearLayout>
+
+    <!-- 选择成立时间 -->
+
+    <LinearLayout
+        android:id="@+id/ll_team_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <Button
+                android:id="@+id/bt_team_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@color/transparent"
+                android:text="@string/sure"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/date_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="年"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/date_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="月"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <com.oxygen.www.widget.MyNumberPicker
+                android:id="@+id/np_team_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true" >
+            </com.oxygen.www.widget.MyNumberPicker>
+
+            <com.oxygen.www.widget.MyNumberPicker
+                android:id="@+id/np_team_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true" >
+            </com.oxygen.www.widget.MyNumberPicker>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

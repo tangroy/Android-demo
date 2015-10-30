@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/bind_number" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/icon_binded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:src="@drawable/icon_binded_number" />
+
+    <TextView
+        android:id="@+id/binded_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_binded"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:textColor="#434343"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/binded_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/binded_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#979797"
+        android:text="可用手机号和密码直接登陆"
+        android:textSize="15sp" />
+
+</RelativeLayout>

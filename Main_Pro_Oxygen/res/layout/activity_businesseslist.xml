@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        style="@style/style_rl_top_title" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/style_iv_top_title_left"
+            android:src="@drawable/iv_selector_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_tv_top_title"
+            android:text="@string/businesses" />
+
+        <TextView
+            android:id="@+id/tv_created_adress"
+            style="@style/style_iv_top_title_right"
+            android:drawableLeft="@drawable/icon_created_address"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/rl_top"
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_adress"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:background="@drawable/input"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/select_adress"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_setadress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/red"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/ll_search"
+        android:background="@color/select_adress_name" />
+
+    <RadioGroup
+        android:id="@+id/rg_selection"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_top"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/address_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/stadium_top_arrow"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="全部类型"
+            android:textColor="@color/select_adress"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/address_nearby"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/stadium_top_arrow"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="附近场馆"
+            android:textColor="@color/select_adress"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/address_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/stadium_top_search"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:text="搜索"
+            android:textColor="@color/select_adress"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rg_selection"
+        android:background="@color/select_adress_name" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_bottom" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/prlv_businesses_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_content"
+            android:divider="@color/o2_link2"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" />
+
+        <ListView
+            android:id="@+id/lv_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:visibility="gone" >
+        </ListView>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tv_businesslistisnull"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="30dp"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
